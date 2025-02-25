@@ -2,7 +2,10 @@ import UserModel from "../models/UserModel.js";
 import {
   loginUserService,
   registrationService,
-  uploadMulterService,
+  createPortfolioService,
+  getAllPortfoliosService,
+  updatePortfolioService,
+  deletePortfolioService,
 } from "../services/UserServices.js";
 
 export const registration = async (req, res) => {
@@ -20,10 +23,8 @@ export const loginUser = async (req, res) => {
 
   if (result.status === 200) {
     res.cookie("token", result.token, {
-      expires: new Date(Date.now() + 1000 * 60 * 60 * 5), // 5 hours
-      httpOnly: true,
-      secure: true, // Only in HTTPS
-      sameSite: "Strict",
+      expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
+      httpOnly: false,
     });
 
     return res.status(result.status).json({
@@ -43,9 +44,8 @@ export const loginUser = async (req, res) => {
 export const logoutUser = async (req, res) => {
   try {
     res.clearCookie("token", {
-      httpOnly: true,
-      secure: true,
-      sameSite: "Strict",
+      expires: new Date(Date.now() - 24 * 60 * 60 * 1000),
+      httpOnly: false,
     });
 
     return res.status(200).json({
@@ -60,13 +60,45 @@ export const logoutUser = async (req, res) => {
   }
 };
 
-// Use Multer File Upload Controller
-export const uploadMulter = async (req, res) => {
-  let result = await uploadMulterService(req);
+//User Create Portfolio
+export const createPortfolio = async (req, res) => {
+  let result = await createPortfolioService(req);
   return res.status(result.status).json({
     success: result.success,
     error: result.error,
     message: result.message,
     data: result.data,
+  });
+};
+
+//User Get Portfolio
+export const getAllPortfolios  = async (req, res) => {
+  let result = await getAllPortfoliosService(req);
+  return res.status(result.status).json({
+    success: result.success,
+    error: result.error,
+    message: result.message,
+    data: result.data,
+  });
+};
+
+//User Update Portfolio
+export const updatePortfolio  = async (req, res) => {
+  let result = await updatePortfolioService(req);
+  return res.status(result.status).json({
+    success: result.success,
+    error: result.error,
+    message: result.message,
+    data: result.data,
+  });
+};
+
+//User Delete Portfolio
+export const deletePortfolio = async (req, res) => {
+  let result = await deletePortfolioService(req);
+  return res.status(result.status).json({
+    success: result.success,
+    error: result.error,
+    message: result.message,
   });
 };

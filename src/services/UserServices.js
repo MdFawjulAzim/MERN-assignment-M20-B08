@@ -1,6 +1,7 @@
 import UserModel from "../models/UserModel.js";
 import bcryptjs from "bcryptjs";
 import { EncodeToken } from "../utils/TokenHelper.js";
+import PortfolioModel from "../models/PortfolioModel.js";
 
 export const registrationService = async (req) => {
   try {
@@ -101,26 +102,120 @@ export const loginUserService = async (req) => {
   }
 };
 
-export const uploadMulterService = async (req) => {
+export const createPortfolioService = async (req) => {
   try {
-    if (!req.file) {
-      return {
-        status: 400,
-        success: false,
-        error: true,
-        message: "No file provided",
-      };
-    }
-    const url =req.file.path.replace(/\\/g, "/");
+    const { title, description, img, codelink, livelink } = req.body;
+    const portfolio = await PortfolioModel.create({
+      userId: req.headers.user_id,
+      title,
+      description,
+      img,
+      codelink,
+      livelink,
+    });
+
     return {
       status: 200,
       success: true,
       error: false,
-      message: "File uploaded successfully",
-      data: {
-        url: url,
-        filename: req.file.originalname,
-      },
+      message: "Portfolio Create Successfully",
+      data: portfolio,
+    };
+  } catch (err) {
+    return {
+      status: 500,
+      success: false,
+      error: true,
+      message: err.message || "Something went wrong",
+    };
+  }
+};
+
+export const getAllPortfoliosService = async (req) => {
+  try {
+    const portfolios = await PortfolioModel.find({
+      userId: req.headers.user_id,
+    });
+    return {
+      status: 200,
+      success: true,
+      error: false,
+      message: "Portfolio Read Successfully",
+      data: portfolios,
+    };
+  } catch (err) {
+    return {
+      status: 500,
+      success: false,
+      error: true,
+      message: err.message || "Something went wrong",
+    };
+  }
+};
+
+export const updatePortfolioService = async (req) => {
+  try {
+    const { id } = req.params; // Get portfolio ID from the request params
+    const { title, description, img, codelink, livelink } = req.body;
+
+    // Find and update the portfolio
+    const updatedPortfolio = await PortfolioModel.findOneAndUpdate(
+      { _id: id, userId: req.headers.user_id },
+      { title, description, img, codelink, livelink },
+      { new: true } // Returns the updated document
+    );
+
+    if (!updatedPortfolio) {
+      return {
+        status: 404,
+        success: false,
+        error: true,
+        message: "Portfolio not found or unauthorized action",
+      };
+    }
+
+    return {
+      status: 200,
+      success: true,
+      error: false,
+      message: "Portfolio updated successfully",
+      data: updatedPortfolio,
+    };
+  } catch (err) {
+    return {
+      status: 500,
+      success: false,
+      error: true,
+      message: err.message || "Something went wrong",
+    };
+  }
+};
+
+export const deletePortfolioService = async (req) => {
+  try {
+    const { id } = req.params; // Get portfolio ID from the request params
+
+    // Find and delete the portfolio
+    const deletedPortfolio = await PortfolioModel.findOneAndDelete({
+      _id: id,
+      userId: req.headers.user_id,
+    });
+
+    if (!deletedPortfolio) {
+      return {
+        status: 404,
+        success: false,
+        error: true,
+        message: "Portfolio not found or unauthorized action",
+      };
+    }
+
+    return {
+      status: 200,
+      success: true,
+      error: false,
+      message: "Portfolio deleted successfully",
+      data: deletedPortfolio,
     };
   } catch (err) {
     return {

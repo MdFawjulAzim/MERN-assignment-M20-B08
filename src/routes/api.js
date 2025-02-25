@@ -10,4 +10,9 @@ router.post("/login", Controller.loginUser);
 //user Logout Cookie deleted
 router.get("/logout", AuthMiddleware, Controller.logoutUser);
 
+router.post("/createPortfolio", AuthMiddleware, Controller.createPortfolio);
+router.get("/getAllPortfolios", AuthMiddleware, Controller.getAllPortfolios);
+router.post("/updatePortfolio/:id", AuthMiddleware, Controller.updatePortfolio);
+router.get("/deletePortfolio/:id", AuthMiddleware, Controller.deletePortfolio);
+
 export default router;
