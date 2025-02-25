@@ -24,10 +24,10 @@ This is a backend API built using **Express.js** for managing portfolios. Users 
 - `POST /api/login` - Login user and receive JWT token
 
 ### 📁 Portfolio Management (Authorization Required)
-- `POST /api/portfolio` - Create a new portfolio
-- `GET /api/portfolio` - Get all portfolios of the logged-in user
-- `PUT /api/portfolio/:id` - Update an existing portfolio
-- `DELETE /api/portfolio/:id` - Delete a portfolio by ID
+- `POST /api/v1/createPortfolio` - Create a new portfolio
+- `GET /api/v1/getAllPortfolios` - Get all portfolios of the logged-in user
+- `PUT /api/v1/updatePortfolio/:id` - Update an existing portfolio
+- `DELETE /api/v1/deletePortfolio/:id` - Delete a portfolio by ID
 
 ## 📦 Installation and Setup
 
