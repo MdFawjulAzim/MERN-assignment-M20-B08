@@ -1,0 +1,941 @@
+{
+	"info": {
+		"_postman_id": "b9e0505f-a84a-4663-837b-60815dc63970",
+		"name": "assignment_module_20_batch_08",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38179196"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"MD. Fawjul Azim\",\r\n    \"email\": \"mdfawjulazim617@gmail.com.com\",\r\n    \"password\": \"fawjul@gmail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/registration",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Registration Route",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"MD. Fawjul Azim\",\r\n    \"email\": \"mdfawjulazim617@gmail.com.com\",\r\n    \"password\": \"fawjul@gmail\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/registration",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"registration"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';img-src *;base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "9999999999"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "9999999996"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 11:48:36 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1740484968"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"error\": false,\n    \"message\": \"User registered successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mdfawjulazim617@gmail.com.com\",\r\n    \"password\": \"fawjul@gmail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/login",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Route",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"mdfawjulazim617@gmail.com.com\",\r\n    \"password\": \"fawjul@gmail\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/login",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';img-src *;base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "9999999999"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "9999999995"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 11:49:37 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1740484968"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1kZmF3anVsYXppbTYxN0BnbWFpbC5jb20uY29tIiwidXNlcl9pZCI6IjY3YmRhZTE0NDJmNGJlMzNlZTk4YzE0YyIsImlhdCI6MTc0MDQ4NDE3OCwiZXhwIjoxNzQwNTAyMTc4fQ.QU22FJoUIn7TUFqUsSrgcHMcwBuesE-MLRkh1csCHf8; Path=/; Expires=Tue, 25 Feb 2025 16:49:38 GMT; HttpOnly; Secure; SameSite=Strict"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User logged in successfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1kZmF3anVsYXppbTYxN0BnbWFpbC5jb20uY29tIiwidXNlcl9pZCI6IjY3YmRhZTE0NDJmNGJlMzNlZTk4YzE0YyIsImlhdCI6MTc0MDQ4NDE3OCwiZXhwIjoxNzQwNTAyMTc4fQ.QU22FJoUIn7TUFqUsSrgcHMcwBuesE-MLRkh1csCHf8\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/logout",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout Route",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE}}/logout",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';img-src *;base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "9999999999"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "9999999997"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 12:02:14 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1740485831"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=; Path=/; Expires=Mon, 24 Feb 2025 12:02:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User logged out successfully!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "create Portfolio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"mdfawjulazim617@gmail.com.com\",\r\n    \"description\": \"fawjul@gmail\",\r\n    \"img\": \"fawjul@gmail\",\r\n    \"codelink\": \"fawjul@gmail\",\r\n    \"livelink\": \"fawjul@gmail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/createPortfolio",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"createPortfolio"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create Portfolio Route",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"mdfawjulazim617@gmail.com.com\",\r\n    \"description\": \"fawjul@gmail\",\r\n    \"img\": \"fawjul@gmail\",\r\n    \"codelink\": \"fawjul@gmail\",\r\n    \"livelink\": \"fawjul@gmail\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/createPortfolio",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"createPortfolio"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';img-src *;base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "9999999999"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "9999999997"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 12:08:03 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1740486145"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "370"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"error\": false,\n    \"message\": \"Portfolio Create Successfully\",\n    \"data\": {\n        \"userId\": \"67bdae1442f4be33ee98c14c\",\n        \"title\": \"mdfawjulazim617@gmail.com.com\",\n        \"description\": \"fawjul@gmail\",\n        \"img\": \"fawjul@gmail\",\n        \"codelink\": \"fawjul@gmail\",\n        \"livelink\": \"fawjul@gmail\",\n        \"_id\": \"67bdb2a3b7c0ab3ff70824c5\",\n        \"createdAt\": \"2025-02-25T12:08:03.224Z\",\n        \"updatedAt\": \"2025-02-25T12:08:03.224Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get All Portfolios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/getAllPortfolios",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"getAllPortfolios"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Portfolios Route",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE}}/getAllPortfolios",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"getAllPortfolios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';img-src *;base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "9999999999"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "9999999998"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 12:13:32 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1740486513"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "952"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"error\": false,\n    \"message\": \"Portfolio Read Successfully\",\n    \"data\": [\n        {\n            \"_id\": \"67bdb27cb7c0ab3ff70824c3\",\n            \"userId\": \"67bdae1442f4be33ee98c14c\",\n            \"title\": \"mdfawjulazim617@gmail.com.com\",\n            \"description\": \"fawjul@gmail\",\n            \"img\": \"fawjul@gmail\",\n            \"codelink\": \"fawjul@gmail\",\n            \"livelink\": \"fawjul@gmail\",\n            \"createdAt\": \"2025-02-25T12:07:24.872Z\",\n            \"updatedAt\": \"2025-02-25T12:07:24.872Z\"\n        },\n        {\n            \"_id\": \"67bdb3f3efc2bb1ed3ca349e\",\n            \"userId\": \"67bdae1442f4be33ee98c14c\",\n            \"title\": \"mdfawjulazim617@gmail.com.com\",\n            \"description\": \"fawjul@gmail\",\n            \"img\": \"fawjul@gmail\",\n            \"codelink\": \"fawjul@gmail\",\n            \"livelink\": \"fawjul@gmail\",\n            \"createdAt\": \"2025-02-25T12:13:39.754Z\",\n            \"updatedAt\": \"2025-02-25T12:13:39.754Z\"\n        },\n        {\n            \"_id\": \"67bdb3f4efc2bb1ed3ca34a0\",\n            \"userId\": \"67bdae1442f4be33ee98c14c\",\n            \"title\": \"mdfawjulazim617@gmail.com.com\",\n            \"description\": \"fawjul@gmail\",\n            \"img\": \"fawjul@gmail\",\n            \"codelink\": \"fawjul@gmail\",\n            \"livelink\": \"fawjul@gmail\",\n            \"createdAt\": \"2025-02-25T12:13:40.724Z\",\n            \"updatedAt\": \"2025-02-25T12:13:40.724Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update Portfolio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"mdfawjulazim617@gmail.com.com\",\r\n    \"description\": \"fawjul@gmail\",\r\n    \"img\": \"fawjul@gmail\",\r\n    \"codelink\": \"fawjul@gmail\",\r\n    \"livelink\": \"fawjul@gmail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/createPortfolio",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"createPortfolio"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create Portfolio Route",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"mdfawjulazim@gmail.com.com\",\r\n    \"description\": \"fawjul@gmail\",\r\n    \"img\": \"fawjul@gmail\",\r\n    \"codelink\": \"fawjul@gmail\",\r\n    \"livelink\": \"fawjul@gmail\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/updatePortfolio/67bdb27cb7c0ab3ff70824c3",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"updatePortfolio",
+										"67bdb27cb7c0ab3ff70824c3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';img-src *;base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "9999999999"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "9999999993"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 12:18:54 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1740486797"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "368"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"error\": false,\n    \"message\": \"Portfolio updated successfully\",\n    \"data\": {\n        \"_id\": \"67bdb27cb7c0ab3ff70824c3\",\n        \"userId\": \"67bdae1442f4be33ee98c14c\",\n        \"title\": \"mdfawjulazim@gmail.com.com\",\n        \"description\": \"fawjul@gmail\",\n        \"img\": \"fawjul@gmail\",\n        \"codelink\": \"fawjul@gmail\",\n        \"livelink\": \"fawjul@gmail\",\n        \"createdAt\": \"2025-02-25T12:07:24.872Z\",\n        \"updatedAt\": \"2025-02-25T12:18:54.934Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete Portfolio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/deletePortfolio/67bdb27cb7c0ab3ff70824c3",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"deletePortfolio",
+								"67bdb27cb7c0ab3ff70824c3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE",
+			"value": "http://localhost:4040/api/v1",
+			"type": "string"
+		}
+	]
+}
